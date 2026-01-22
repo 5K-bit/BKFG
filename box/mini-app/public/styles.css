@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: #0b0f14;
+  color: #f4f6fb;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+  font-size: 32px;
+}
+
+header p {
+  margin: 0 0 24px;
+  color: #c3cad6;
+}
+
+.card {
+  background: #121823;
+  border: 1px solid #1d2635;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card.subtle {
+  background: #0f141d;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 13px;
+  color: #9ca6b6;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+input,
+select,
+button {
+  border-radius: 10px;
+  border: 1px solid #2a3445;
+  background: #0b0f14;
+  color: #f4f6fb;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  background: #1e293b;
+  width: auto;
+  white-space: nowrap;
+}
+
+button.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+.result {
+  margin-top: 12px;
+  background: #0b0f14;
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px dashed #2a3445;
+  min-height: 40px;
+}
+
+.code {
+  white-space: pre-wrap;
+  font-size: 13px;
+  color: #dbe2f0;
+}
