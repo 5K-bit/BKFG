@@ -1,0 +1,22 @@
+{
+  "name": "blackfong-tip-bot",
+  "version": "1.0.0",
+  "description": "Farcaster tipping bot for BKFG and EEVEE",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "viem": "^2.44.4"
+  }
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackfong Mini App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Blackfong Mini App</h1>
+        <p>Link your Base + Solana wallets to unlock Blackfong Power.</p>
+      </header>
+
+      <section class="card">
+        <h2>1) Link wallets</h2>
+        <div class="grid">
+          <div>
+            <label for="baseAddress">Base wallet</label>
+            <div class="row">
+              <input id="baseAddress" placeholder="0x..." />
+              <button id="connectBase">Connect</button>
+            </div>
+          </div>
+          <div>
+            <label for="solAddress">Solana wallet</label>
+            <div class="row">
+              <input id="solAddress" placeholder="Solana address" />
+              <button id="connectSol">Connect</button>
+            </div>
+          </div>
+        </div>
+        <button id="calculatePower" class="primary">Calculate Power</button>
+        <div id="powerResult" class="result"></div>
+      </section>
+
+      <section class="card">
+        <h2>2) Burn/Mint Bridge (BKFG)</h2>
+        <div class="grid">
+          <div>
+            <label for="bridgeProvider">Provider</label>
+            <select id="bridgeProvider">
+              <option value="ccip">Chainlink CCIP</option>
+              <option value="symbiosis">Symbiosis</option>
+            </select>
+          </div>
+          <div>
+            <label for="bridgeAmount">Amount</label>
+            <input id="bridgeAmount" type="number" min="0" step="0.0001" />
+          </div>
+          <div>
+            <label for="fromChain">From</label>
+            <select id="fromChain">
+              <option value="base">Base</option>
+              <option value="solana">Solana</option>
+            </select>
+          </div>
+          <div>
+            <label for="toChain">To</label>
+            <select id="toChain">
+              <option value="solana">Solana</option>
+              <option value="base">Base</option>
+            </select>
+          </div>
+        </div>
+        <button id="bridgePlan" class="primary">Create Bridge Plan</button>
+        <pre id="bridgeResult" class="result code"></pre>
+      </section>
+
+      <section class="card subtle">
+        <h2>3) Tipping velocity</h2>
+        <p>
+          Tip BKFG or EEVEE in Farcaster comments using the bot. Each tip
+          increases velocity and can boost Blackfong Power.
+        </p>
+        <pre id="velocityResult" class="result code"></pre>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
